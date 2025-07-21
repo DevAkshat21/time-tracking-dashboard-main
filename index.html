@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+</head>
+<body>
+<div class="wrapper">
+  
+  <div class="sec1">
+    <div class="profile">
+      <img src="images/image-jeremy.png" alt="profile-image" class="profile-image">
+      <div class="profile-name">
+        <p >Report for <br> <span class="name">Jeremy Robson</span></p>
+      </div>
+    </div>
+    <nav class="view-switcher">
+      <a href="#" class="active" onclick="switchView(this)">Daily</a>
+      <a href="#" onclick="switchView(this)">Weekly</a>
+      <a href="#" onclick="switchView(this)">Monthly</a>
+    </nav>
+  </div>
+
+
+  <div class="work">
+    <div class="icon"><img src="images/icon-work.svg" alt="icon-work"></div>
+    <div class="text">
+      <div class="sec-header">
+        <h1>Work</h1>
+        <img src="images/icon-ellipsis.svg" alt="more">
+      </div>
+      <div class="data">
+      <span class="timespan daily" id = "work-daily"></span>  <span class="previous previous-daily"  id = "work-daily-previous"> Yesterday - 2hrs</span> <!-- daily -->
+      <span class="timespan weekly" id = "work-weekly"></span> <span class="previous previous-weekly" id = "work-weekly-previous"> Last Week - 2hrs</span> <!-- weekly -->
+      <span class="timespan monthly" id = "work-monthly"></span><span class="previous previous-monthly" id = "work-monthly-previous"> Last Month - 2hrs</span> <!-- monthly -->
+      </div>
+    </div>
+  </div>
+
+
+  <div class ="play">
+    <div class="icon"><img src="images/icon-play.svg" alt="icon-play"></div>
+    <div class="text">
+      <div class="sec-header">
+        <h1>Play</h1>
+        <img src="images/icon-ellipsis.svg" alt="more">
+      </div>
+      <div class="data">
+      <span class="timespan daily" id = "play-daily">1hrs</span>  <span class="previous previous-daily"  id = "play-daily-previous"> Yesterday - 2hrs</span> <!-- daily -->
+      <span class="timespan weekly" id = "play-weekly">10hrs</span> <span class="previous previous-weekly" id = "play-weekly-previous"> Last Week - 2hrs</span> <!-- weekly -->
+      <span class="timespan monthly" id = "play-monthly">23hrs</span><span class="previous previous-monthly" id = "play-monthly-previous"> Last Month - 2hrs</span> <!-- monthly -->
+      </div>
+    </div>
+  </div>
+
+
+  <div class="study">
+    <div class="icon"><img src="images/icon-study.svg" alt="icon-study"></div>
+    <div class="text">
+      <div class="sec-header">
+        <h1>Study</h1>
+        <img src="images/icon-ellipsis.svg" alt="more">
+      </div>
+      <div class="data">
+      <span class="timespan daily" id = "study-daily">1hrs</span>  <span class=" previous previous-daily"  id = "study-daily-previous"> Yesterday - 2hrs</span> <!-- daily -->
+      <span class="timespan weekly" id = "study-weekly">10hrs</span> <span class="previous previous-weekly" id = "study-weekly-previous"> Last Week - 2hrs</span> <!-- weekly -->
+      <span class="timespan monthly" id = "study-monthly">23hrs</span><span class="previous previous-monthly" id = "study-monthly-previous"> Last Month - 2hrs</span> <!-- monthly -->
+      </div>
+    </div>
+  </div>
+
+
+  <div class="exercise">
+    <div class="icon"><img src="images/icon-exercise.svg" alt="icon-exercise"></div>
+    <div class="text">
+      <div class="sec-header">
+        <h1>Exercise</h1>
+        <img src="images/icon-ellipsis.svg" alt="more">
+      </div>
+      <div class="data">
+      <span class="timespan daily" id = "exercise-daily">1hrs</span>  <span class="previous previous-daily"  id = "exercise-daily-previous"> Yesterday - 2hrs</span> <!-- daily -->
+      <span class="timespan weekly" id = "exercise-weekly">10hrs</span> <span class="previous previous-weekly" id = "exercise-weekly-previous"> Last Week - 2hrs</span> <!-- weekly -->
+      <span class="timespan monthly" id = "exercise-monthly">23hrs</span><span class="previous previous-monthly" id = "exercise-monthly-previous"> Last Month - 2hrs</span> <!-- monthly -->
+      </div>
+    </div>
+  </div>
+
+
+  <div class="social">
+    <div class="icon"><img src="images/icon-social.svg" alt="icon-social"></div>
+    <div class="text">
+      <div class="sec-header">
+        <h1>Social</h1>
+        <img src="images/icon-ellipsis.svg" alt="more">
+      </div>
+      <div class="data">
+      <span class="timespan daily" id = "social-daily">1hrs</span>  <span class="previous previous-daily"  id = "social-daily-previous"> Yesterday - 2hrs</span> <!-- daily -->
+      <span class="timespan weekly" id = "social-weekly">10hrs</span> <span class="previous previous-weekly" id = "social-weekly-previous"> Last Week - 2hrs</span> <!-- weekly -->
+      <span class="timespan monthly" id = "social-monthly">23hrs</span><span class="previous previous-monthly" id = "social-monthly-previous"> Last Month - 2hrs</span> <!-- monthly -->
+      </div>
+    </div>
+  </div>
+
+
+  <div class="self-care">
+    <div class="icon"><img src="images/icon-self-care.svg" alt="icon-self-care"></div>
+    <div class="text">
+      <div class="sec-header">
+        <h1>Self Care</h1>
+        <img src="images/icon-ellipsis.svg" alt="more">
+      </div>
+      <div class="data">
+        <span class="timespan weekly" id = "self-care-weekly">10hrs</span> <span class="previous previous-weekly" id = "self-care-weekly-previous"> Last Week - 2hrs</span> <!-- weekly -->
+        <span class="timespan daily" id = "self-care-daily">1hrs</span>  <span class="previous previous-daily"  id = "self-care-daily-previous"> Yesterday - 2hrs</span> <!-- daily -->
+        <span class="timespan monthly" id = "self-care-monthly">23hrs</span><span class="previous previous-monthly" id = "self-care-monthly-previous"> Last Month - 2hrs</span> <!-- monthly -->
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">DevAkshat21</a>.
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
